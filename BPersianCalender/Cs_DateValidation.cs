@@ -6,8 +6,12 @@ using System.Globalization;
 using System.Windows.Forms;
 namespace BPersianCalender
 {
-    public class DateValidation
+    public class Cs_DateValidation
     {
+
+        DateTime dt;
+
+
         public bool validate(string dateStr, bool dateCheck)
         {
             if (dateStr == "    /  /")
@@ -67,6 +71,8 @@ namespace BPersianCalender
             else
                 return false;
         }
+
+
         public string date(string sr)
         {
             char[] srr;
@@ -125,6 +131,8 @@ namespace BPersianCalender
             }
             return c;
         }
+
+
         public string GetDateStr(string str)
         {
             string st = str;
@@ -197,7 +205,8 @@ namespace BPersianCalender
             }
             return c;
         }
-        DateTime dt;
+
+
         public DateTime GetDate(string str)
         {
             string st = str;
@@ -222,6 +231,8 @@ namespace BPersianCalender
                 return dt;
             }
         }
+
+
         public string dateR(string sr)
         {
             char[] srr;

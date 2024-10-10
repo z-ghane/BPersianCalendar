@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{B151A723-17E6-45EC-9698-D5F9BC1E5919}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>BPersianCalender</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
@@ -35,10 +35,12 @@
     <RootNamespace>BPersianCalender</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>BPersianCalender.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1414321578_86196.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,37 +53,31 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1414321578_86196.ico" />
     <Content Include="Resources\1413037734_Last.png" />
     <Content Include="Resources\1413037734_Last1.png" />
     <Content Include="Resources\Calendar-1128083418.png" />
     <Content Include="Resources\Calendar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBPersianCalender.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBPersianCalender.Designer.cs">
-      <DependentUpon>AboutBPersianCalender.cs</DependentUpon>
-    </Compile>
     <Compile Include="BPersianTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BPersianTextBox.Designer.cs">
       <DependentUpon>BPersianTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConvertDate.cs" />
-    <Compile Include="DateValidation.cs" />
-    <Compile Include="PCalander.cs">
+    <Compile Include="Cs_DateComponentsShamsi.cs" />
+    <Compile Include="Cs_DateValidation.cs" />
+    <Compile Include="Frm_PCalander.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PCalander.designer.cs">
-      <DependentUpon>PCalander.cs</DependentUpon>
+    <Compile Include="Frm_PCalander.designer.cs">
+      <DependentUpon>Frm_PCalander.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs" />
     <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Cs_ShamsiCalendar.cs" />
     <Compile Include="SMIO_DataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -90,20 +86,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutBPersianCalender.resx">
-      <DependentUpon>AboutBPersianCalender.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PCalander.resx">
-      <DependentUpon>PCalander.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_PCalander.resx">
+      <DependentUpon>Frm_PCalander.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DLL.rar" />
     <None Include="Properties\DataSources\SMIOProject.ProjectClass.tblSMIOSateKari.datasource" />
     <None Include="Properties\DataSources\SMIOProject.ProjectClass.tblSMIOShift.datasource" />
     <None Include="Properties\Settings.settings" />
+    <None Include="Resources\BNazanin.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
