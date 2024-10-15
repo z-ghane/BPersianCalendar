@@ -50,7 +50,6 @@ so I changed them to make a difference between them.
 ### Recommended versions
 
 - v.3.1.0.0
-- v.3.3.0.0
 - v.4.0.0.0
 
 ### Source code
