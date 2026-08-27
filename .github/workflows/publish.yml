@@ -27,8 +27,13 @@ jobs:
 
       - name: Create NuGet package
         working-directory: BPersianCalendar/BPersianCalendar/BPersianCalendar/myNuget
-        run: nuget pack BPersianCalendar.nuspec -OutputDirectory ../../../../artifacts
+        run: nuget pack BPersianCalendar.nuspec -OutputDirectory "$env:GITHUB_WORKSPACE\artifacts"
 
+      - name: Verify package
+        shell: pwsh
+        run: |
+            Get-ChildItem "$env:GITHUB_WORKSPACE\artifacts" -Recurse
+    
       - name: NuGet login
         uses: NuGet/login@v1
         id: login
@@ -36,4 +41,5 @@ jobs:
           user: zghane
 
       - name: Publish package
-        run: dotnet nuget push "./artifacts/*.nupkg" --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
+        shell: pwsh
+        run: dotnet nuget push "$env:GITHUB_WORKSPACE\artifacts\*.nupkg" --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
