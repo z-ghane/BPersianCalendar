@@ -21,9 +21,9 @@ Tel      : 09359656582
 ===============================================
 
 BPersianCalender.dll
-v.2.2.0.0
+v.2.3.0.0
 2014
-1393/08/15
+1393/08/20
 
 License: فاتحه و صلوات
 
@@ -39,4 +39,5 @@ License: فاتحه و صلوات
   What is new?
 ===============================================
 
-change ContextMenuStrip of BPersianTextBox.
+Add some item to ContextMenuStrip of BPersianTextBox.
+remove extra controler on calendar

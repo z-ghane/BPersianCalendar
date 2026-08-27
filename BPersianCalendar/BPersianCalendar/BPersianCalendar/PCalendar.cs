@@ -91,8 +91,6 @@ namespace BPersianCalendar
 
         private Label lblShamsi;
 
-        private BPersianCalenderTextBox bPersianCalenderTextBox1;
-
         public PCalandar()
         {
             InitializeComponent();
@@ -441,7 +439,6 @@ namespace BPersianCalendar
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgCalander = new System.Windows.Forms.DataGridView();
@@ -472,7 +469,6 @@ namespace BPersianCalendar
             this.btnPrevM = new System.Windows.Forms.Button();
             this.btnNextY = new System.Windows.Forms.Button();
             this.btnNextM = new System.Windows.Forms.Button();
-            this.bPersianCalenderTextBox1 = new BPersianCalendar.BPersianCalenderTextBox();
             ((System.ComponentModel.ISupportInitialize)this.dgCalander).BeginInit();
             this.panel1.SuspendLayout();
             base.SuspendLayout();
@@ -719,19 +715,10 @@ namespace BPersianCalendar
             this.btnNextM.TabIndex = 8;
             this.btnNextM.UseVisualStyleBackColor = true;
             this.btnNextM.Click += new System.EventHandler(btnNextM_Click);
-            this.bPersianCalenderTextBox1.Location = new System.Drawing.Point(115, 17);
-            this.bPersianCalenderTextBox1.Miladi = new System.DateTime(0L);
-            this.bPersianCalenderTextBox1.Name = "bPersianCalenderTextBox1";
-            this.bPersianCalenderTextBox1.ReadOnly = true;
-            this.bPersianCalenderTextBox1.SelectedDate = null;
-            this.bPersianCalenderTextBox1.Shamsi = null;
-            this.bPersianCalenderTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.bPersianCalenderTextBox1.TabIndex = 14;
             base.AutoScaleDimensions = new System.Drawing.SizeF(7f, 13f);
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             base.ClientSize = new System.Drawing.Size(325, 219);
-            base.Controls.Add(this.bPersianCalenderTextBox1);
             base.Controls.Add(this.panel1);
             base.Controls.Add(this.btnClose);
             base.Controls.Add(this.btnToday);
@@ -760,7 +747,6 @@ namespace BPersianCalendar
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             base.ResumeLayout(false);
-            base.PerformLayout();
         }
     }
 
