@@ -21,9 +21,9 @@ Tel      : 09359656582
 ===============================================
 
 BPersianCalender.dll
-v.2.3.0.0
+v.3.0.0.0
 2014
-1393/08/20
+1393/08/25
 
 License: فاتحه و صلوات
 
@@ -39,5 +39,10 @@ License: فاتحه و صلوات
   What is new?
 ===============================================
 
-Add some item to ContextMenuStrip of BPersianTextBox.
-remove extra controler on calendar
+Change "بستن" to "درج"
+Add DataGridView for choosing Month and Year
+Fix this Bug: 
+شما وقتی پنجره تاریخ باز میشه 
+میبینید که پیش فرض روی تاریخ امروز است 
+حالا بیاید سال و ماه را افزایش بدین و روی روز اصلا کلیک نکنید و 
+بر روی دکمه بستن کلیک کنید میبینید که تاریخ امروز ثبت میشه نه تاریخی که ماه و سال آن را افزایش داده ا ید !
