@@ -705,7 +705,7 @@ namespace BPersianCalendar
             this.btnNextM.Click += new System.EventHandler(btnNextM_Click);
             base.AutoScaleDimensions = new System.Drawing.SizeF(7f, 13f);
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             base.ClientSize = new System.Drawing.Size(325, 219);
             base.Controls.Add(this.panel1);
             base.Controls.Add(this.btnClose);
