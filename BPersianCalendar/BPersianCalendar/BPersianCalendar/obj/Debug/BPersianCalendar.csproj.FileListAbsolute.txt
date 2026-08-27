@@ -1,0 +1,9 @@
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.csproj.AssemblyReference.cache
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.Properties.Resources.resources
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.csproj.GenerateResource.cache
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.csproj.CoreCompileInputs.cache
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\bin\Debug\BPersianCalendar.pdb
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.pdb
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.PCalendar.resources
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\bin\Debug\BPersianCalendar.dll
+D:\SAVE\Downloads\BPersianCalendar\BPersianCalendar\obj\Debug\BPersianCalendar.dll
