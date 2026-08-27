@@ -1,9 +1,6 @@
 ﻿using System;
 
 
-
-
-
 namespace BPersianCalendar
 {
     public class ShamsiCalandar

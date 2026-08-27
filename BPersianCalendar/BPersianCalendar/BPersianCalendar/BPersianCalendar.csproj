@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PCalendar.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -109,6 +109,7 @@ namespace BPersianCalendar
             FillCalander();
             FindCurrentDate();
             getDates();
+            dgCalander.Focus();
         }
 
         public string MiladiToShamsi(DateTime Mdate)
@@ -332,9 +333,7 @@ namespace BPersianCalendar
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            objshamsiCalander.MiladiDate = selectedMiladiDate;
-            objshamsiCalander.ShamsiDate = selectedShamsiDate;
-            Close();
+            CloseMethod();
         }
 
         public ShamsiCalandar getshamsiCalander()
@@ -389,9 +388,33 @@ namespace BPersianCalendar
             return result;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dgCalander_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //new AboutBPersianCalender().ShowDialog();
+            CloseMethod();
+        }
+
+        private void CloseMethod()
+        {
+            objshamsiCalander.MiladiDate = selectedMiladiDate;
+            objshamsiCalander.ShamsiDate = selectedShamsiDate;
+            Close();
+        }
+
+        private void dgCalander_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return && dgCalander.Rows[dgCalander.SelectedCells[0].RowIndex].Cells[dgCalander.SelectedCells[0].ColumnIndex].Value != null && !string.IsNullOrEmpty(dgCalander.Rows[dgCalander.SelectedCells[0].RowIndex].Cells[dgCalander.SelectedCells[0].ColumnIndex].Value.ToString()))
+            {
+                Text = null;
+                selectedDay = int.Parse(dgCalander.Rows[dgCalander.SelectedCells[0].RowIndex].Cells[dgCalander.SelectedCells[0].ColumnIndex].Value.ToString());
+                selectdMonth = mounthName;
+                selectedYear = YearName;
+                selectedShamsiDate = selectedYear + "/" + ((selectdMonth.ToString().Length == 1) ? ("0" + selectdMonth) : selectdMonth.ToString()) + "/" + ((selectedDay.ToString().Length == 1) ? ("0" + selectedDay) : selectedDay.ToString());
+                Text = "تقویم شمسی | تاریخ انتخاب شده :   " + selectedShamsiDate;
+                selectedMiladiDate = pc.ToDateTime(selectedYear, selectdMonth, selectedDay, 0, 0, 0, 0);
+                lblShamsi.Text = selectedShamsiDate;
+                lblMiladi.Text = selectedMiladiDate.ToShortDateString();
+                CloseMethod();
+            }
         }
 
         protected override void Dispose(bool disposing)
@@ -428,14 +451,14 @@ namespace BPersianCalendar
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPrevY = new System.Windows.Forms.Button();
-            this.btnPrevM = new System.Windows.Forms.Button();
-            this.btnNextY = new System.Windows.Forms.Button();
-            this.btnNextM = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.lblMiladi = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblShamsi = new System.Windows.Forms.Label();
+            this.btnPrevY = new System.Windows.Forms.Button();
+            this.btnPrevM = new System.Windows.Forms.Button();
+            this.btnNextY = new System.Windows.Forms.Button();
+            this.btnNextM = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)this.dgCalander).BeginInit();
             this.panel1.SuspendLayout();
             base.SuspendLayout();
@@ -480,6 +503,8 @@ namespace BPersianCalendar
             this.dgCalander.Size = new System.Drawing.Size(323, 97);
             this.dgCalander.TabIndex = 0;
             this.dgCalander.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(dgCalander_CellClick);
+            this.dgCalander.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(dgCalander_CellDoubleClick);
+            this.dgCalander.KeyDown += new System.Windows.Forms.KeyEventHandler(dgCalander_KeyDown);
             this.c0.HeaderText = "ش";
             this.c0.Name = "c0";
             this.c0.ReadOnly = true;
@@ -594,6 +619,38 @@ namespace BPersianCalendar
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 22);
             this.panel1.TabIndex = 13;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 178);
+            this.label8.Location = new System.Drawing.Point(246, 194);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 22);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "تاریخ میلادی:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMiladi.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 178);
+            this.lblMiladi.Location = new System.Drawing.Point(154, 194);
+            this.lblMiladi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblMiladi.Name = "lblMiladi";
+            this.lblMiladi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblMiladi.Size = new System.Drawing.Size(88, 22);
+            this.lblMiladi.TabIndex = 10;
+            this.lblMiladi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 178);
+            this.label9.Location = new System.Drawing.Point(232, 167);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 23);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "تاریخ شمسی:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblShamsi.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 178);
+            this.lblShamsi.Location = new System.Drawing.Point(155, 169);
+            this.lblShamsi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblShamsi.Name = "lblShamsi";
+            this.lblShamsi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblShamsi.Size = new System.Drawing.Size(88, 22);
+            this.lblShamsi.TabIndex = 10;
+            this.lblShamsi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrevY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrevY.FlatAppearance.BorderSize = 0;
             this.btnPrevY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -646,38 +703,6 @@ namespace BPersianCalendar
             this.btnNextM.TabIndex = 8;
             this.btnNextM.UseVisualStyleBackColor = true;
             this.btnNextM.Click += new System.EventHandler(btnNextM_Click);
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 178);
-            this.label8.Location = new System.Drawing.Point(246, 194);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 22);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "تاریخ میلادی:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMiladi.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 178);
-            this.lblMiladi.Location = new System.Drawing.Point(154, 194);
-            this.lblMiladi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblMiladi.Name = "lblMiladi";
-            this.lblMiladi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblMiladi.Size = new System.Drawing.Size(88, 22);
-            this.lblMiladi.TabIndex = 10;
-            this.lblMiladi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 178);
-            this.label9.Location = new System.Drawing.Point(232, 167);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 23);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "تاریخ شمسی:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblShamsi.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 178);
-            this.lblShamsi.Location = new System.Drawing.Point(155, 169);
-            this.lblShamsi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblShamsi.Name = "lblShamsi";
-            this.lblShamsi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblShamsi.Size = new System.Drawing.Size(88, 22);
-            this.lblShamsi.TabIndex = 10;
-            this.lblShamsi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             base.AutoScaleDimensions = new System.Drawing.SizeF(7f, 13f);
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -712,4 +737,5 @@ namespace BPersianCalendar
             base.ResumeLayout(false);
         }
     }
+
 }
