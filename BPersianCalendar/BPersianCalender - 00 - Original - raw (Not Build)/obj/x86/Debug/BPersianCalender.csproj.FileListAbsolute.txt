@@ -1,0 +1,11 @@
+F:\SimaranService\BPersianCalender - Copy\bin\Debug\WindowsApplication.exe.config
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.csprojResolveAssemblyReference.cache
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.AboutBPersianCalender.resources
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.PCalander.resources
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.Properties.Resources.resources
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.csproj.GenerateResource.Cache
+F:\SimaranService\BPersianCalender\bin\Debug\BPersianCalender.exe.config
+F:\SimaranService\BPersianCalender\bin\Debug\BPersianCalender.exe
+F:\SimaranService\BPersianCalender\bin\Debug\BPersianCalender.pdb
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.exe
+F:\SimaranService\BPersianCalender\obj\x86\Debug\BPersianCalender.pdb
