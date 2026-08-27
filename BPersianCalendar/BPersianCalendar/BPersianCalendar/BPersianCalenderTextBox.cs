@@ -13,9 +13,15 @@ namespace BPersianCalendar
 {
     public class BPersianCalenderTextBox : TextBox
     {
-        public DateTime Miladi;
+        public bool SwitchDateFlag = false;
 
         private IContainer components = null;
+
+        public DateTime Miladi { get; set; }
+
+        public string Shamsi { get; set; }
+
+        public string SelectedDate { get; set; }
 
         public BPersianCalenderTextBox()
         {
@@ -37,6 +43,64 @@ namespace BPersianCalendar
             base.ReadOnly = true;
             SendMessage(base.Handle, 211, (IntPtr)2, (IntPtr)(button.Width << 16));
             base.TextAlign = HorizontalAlignment.Left;
+            ContextMenuStrip contextMenuStrip = new ContextMenuStrip
+            {
+                Font = new Font("tahoma", 9f),
+                Items = { "خالی کردن", "-", "امروز", "روز بعد", "روز قبل" }
+            };
+            ContextMenuStrip = contextMenuStrip;
+            contextMenuStrip.Items[0].Click += Null_Click;
+            contextMenuStrip.Items[2].Click += Today_Click;
+            contextMenuStrip.Items[3].Click += NextDay_Click;
+            contextMenuStrip.Items[4].Click += PrevDay_Click;
+        }
+
+        private void SwitchDate_Click(object sender, EventArgs e)
+        {
+            if (!SwitchDateFlag)
+            {
+                SwitchDateFlag = true;
+                Text = Miladi.ToShortDateString();
+            }
+            else
+            {
+                SwitchDateFlag = false;
+                Text = Shamsi;
+            }
+        }
+
+        private void PrevDay_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Text))
+            {
+                Miladi = Miladi.AddDays(-1.0);
+                Text = new ConvertDate().MiladiToShamsi(Miladi);
+                Shamsi = new ConvertDate().MiladiToShamsi(Miladi);
+            }
+        }
+
+        private void NextDay_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Text))
+            {
+                Miladi = Miladi.AddDays(1.0);
+                Text = new ConvertDate().MiladiToShamsi(Miladi);
+                Shamsi = new ConvertDate().MiladiToShamsi(Miladi);
+            }
+        }
+
+        private void Today_Click(object sender, EventArgs e)
+        {
+            Text = new ConvertDate().MiladiToShamsi(DateTime.Now);
+            Miladi = DateTime.Now.Date;
+            Shamsi = new ConvertDate().MiladiToShamsi(Miladi);
+            SelectedDate = Shamsi.Replace("/", "");
+        }
+
+        private void Null_Click(object sender, EventArgs e)
+        {
+            Text = null;
+            Miladi = default(DateTime).Date;
         }
 
         protected override void OnKeyDown(KeyEventArgs e)
@@ -44,6 +108,18 @@ namespace BPersianCalendar
             if (e.KeyCode == Keys.Return)
             {
                 LoadCalender();
+            }
+        }
+
+        protected override void OnTextChanged(EventArgs e)
+        {
+            try
+            {
+                Miladi = new DateValidation().GetDate(Text);
+                Shamsi = Text;
+            }
+            catch (Exception)
+            {
             }
         }
 
@@ -58,6 +134,11 @@ namespace BPersianCalendar
             shamsiCalander2 = new PCalandar().getshamsiCalander();
             Text = shamsiCalander2.ShamsiDate;
             Miladi = shamsiCalander2.MiladiDate;
+            Shamsi = shamsiCalander2.ShamsiDate;
+            if (!string.IsNullOrEmpty(Shamsi))
+            {
+                SelectedDate = Shamsi.Replace("/", "");
+            }
         }
 
         [DllImport("user32.dll")]
