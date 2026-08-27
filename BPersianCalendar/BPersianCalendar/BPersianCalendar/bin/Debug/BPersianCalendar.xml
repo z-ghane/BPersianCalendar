@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BPersianCalendar</name>
+    </assembly>
+    <members>
+        <member name="M:BPersianCalendar.Frm_BPersianCalendar.InitializeDcShamsi">
+            <summary>
+            Before using DcShamsi we have to be sure it's not null.
+            If selected date is null, then initialize it first.
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.Frm_BPersianCalendar.GetDCShamsiSelectedDate">
+            <summary>
+            Returns the selected date
+            </summary>
+        </member>
+        <member name="F:BPersianCalendar.Frm_BPersianCalendar.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.Frm_BPersianCalendar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BPersianCalendar.Frm_BPersianCalendar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi">
+            <summary>
+            This class specify the components of a Date
+            based on ** Shamsi ** Calendar 
+            and has useful methods
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.YearNo">
+            <summary>
+            shamsi yearNo
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.MonthNo">
+            <summary>
+            shamsi monthNo
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.DayNo">
+            <summary>
+            shamsi dayNo
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.#ctor">
+            <summary>
+            set date to current system date (DateTime.Now)
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.SetVar(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            The parameters are supposed to be shamsi 
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.SetVar(System.DateTime)">
+            <param name = "myDateTime">
+            supposed to be geregorian
+            </param>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.SetVar">
+            <summary>
+            Set date to current system date (DateTime.Now)
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.SetVar_AddDays(System.Int32)">
+            <param name = "addDays">
+            could be +positive or -negative
+            </param>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.setVar_AddMonths(System.Int32)">
+            <param name = "addMonths">
+            could be +positive or -negative
+            </param>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.setVar_AddYears(System.Int32)">
+            <param name = "addYears">
+            could be +positive or -negative
+            </param>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.setVar_FirstDayOfMonth">
+            <summary>
+            First Day Of the selected Month
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.setVar_LastDayOfMonth">
+            <summary>
+            Last Day Of the selected Month
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.setVar_FirstDayOfYear">
+            <summary>
+            First Day Of the selected Year
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.setVar_LastDayOfYear">
+            <summary>
+            Last Day Of the selected Year
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.getDateComponents_Gregorian">
+            <summary>
+            Gregorian calendar means: تقویم میلادی
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.getDateAsShortText_Persian">
+            <summary>
+            result: yyyy / mm / dd
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.getDateAsShortText_Gregorian">
+            <summary>
+            result: yyyy / mm / dd
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myClasses.shamsi.Cls_DateComponentsShamsi.getDateAsLongText_Persian">
+            <summary>
+            result: "dddd, d MMMM yyyy" 
+            EX. یک شنبه، 14 فروردین 1404
+            </summary>
+        </member>
+        <member name="F:BPersianCalendar.myComponents.BPersianCalendarTextBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BPersianCalendar.myComponents.BPersianCalendarTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BPersianCalendar.myComponents.BPersianCalendarTextBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BPersianCalendar.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.Properties.Resources.img_png__calendar_16px">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.Properties.Resources.img_png__calendar_20px">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.Properties.Resources.img_png__toLeft_16px">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BPersianCalendar.Properties.Resources.img_png__toRight_16px">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

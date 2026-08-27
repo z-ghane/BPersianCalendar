@@ -17,7 +17,7 @@ namespace BPersianCalendar
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("fa-ir");
             InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("fa-ir"));
 
-            Application.Run(new PCalendar(DateTime.Now));
+            Application.Run(new Frm_BPersianCalendar(null));
         }
     }
 }

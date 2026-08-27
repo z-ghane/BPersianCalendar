@@ -3,11 +3,22 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace BPersianCalendar
+namespace BPersianCalendar.myClasses.shamsi
 {
-    public class DateValidation
+    public class Cls_DateValidation
     {
+        // ******************** Variables ********************
+
+        #region Variables
+
         private DateTime dt;
+
+        #endregion Variables
+
+
+        // ******************** Methods ********************
+
+        #region Methods
 
         public bool validate(string dateStr, bool dateCheck)
         {
@@ -173,6 +184,7 @@ namespace BPersianCalendar
             return text;
         }
 
+
         public DateTime GetDate(string str)
         {
             string[] array = str.Split('/');
@@ -190,6 +202,7 @@ namespace BPersianCalendar
             dt = new DateTime(int.Parse(s), int.Parse(s2), int.Parse(s3), calendar);
             return dt;
         }
+
 
         public string dateR(string sr)
         {
@@ -225,5 +238,9 @@ namespace BPersianCalendar
 
             return text;
         }
+
+        #endregion Methods
+
+
     }
 }

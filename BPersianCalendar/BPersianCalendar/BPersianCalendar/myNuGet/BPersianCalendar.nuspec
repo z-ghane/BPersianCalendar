@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>BPersianCalendar</id>
+    <version>5.0.0</version>
+    <authors>Behnam Rajabi, Z. Ghane</authors>
+    <description>Persian calendar controls and classes for .NET Framework.</description>
+
+    <license type="expression">MIT</license>
+
+    <repository type="git"
+                url="https://github.com/z-ghane/BPersianCalendar" />
+
+    <tags>Persian Shamsi Jalali Calendar Date WinForms WindowsForms Iranian</tags>
+  </metadata>
+
+  <files>
+	<file src="..\bin\Release\BPersianCalendar.dll"
+      target="lib\net35" />
+  </files>
+</package>

@@ -1,0 +1,39 @@
+name: Build and Publish NuGet Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish:
+    runs-on: windows-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build Release
+        run: msbuild BPersianCalendar/BPersianCalendar/BPersianCalendar.slnx /p:Configuration=Release /p:Restore=true
+
+      - name: Create NuGet package
+        working-directory: BPersianCalendar/BPersianCalendar/BPersianCalendar/myNuget
+        run: nuget pack BPersianCalendar.nuspec -OutputDirectory ../../../../artifacts
+
+      - name: NuGet login
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: zghane
+
+      - name: Publish package
+        run: dotnet nuget push "./artifacts/*.nupkg" --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" --source "https://api.nuget.org/v3/index.json" --skip-duplicate

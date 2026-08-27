@@ -2,6 +2,16 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <PackageId>BPersianCalendar</PackageId>
+    <Version>5.0.0</Version>
+    <Authors>Behnam Rajabi, Z. Ghane</Authors>
+    <Description>Persian calendar controls and classes for .NET Framework.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/z-ghane/BPersianCalendar</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Persian;Shamsi;Jalali;Calendar;Date;WinForms;WindowsForms;Iranian</PackageTags>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{86583E42-C1A0-4A75-9049-C3101D7C6B31}</ProjectGuid>
@@ -24,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\BPersianCalendar.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,9 +45,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\BPersianCalendar.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,20 +66,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BPersianCalendarTextBox.cs">
+    <Compile Include="Frm_BPersianCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BPersianCalendar.Designer.cs">
+      <DependentUpon>Frm_BPersianCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myClasses\dgvStyle\Cls_dgvCalendarStyle.cs" />
+    <Compile Include="myClasses\dgvStyle\Cls_dgvStyle.cs" />
+    <Compile Include="myClasses\dgvStyle\Cls_dgvYearMonthStyle.cs" />
+    <Compile Include="myClasses\shamsi\Cls_DateValidation.cs" />
+    <Compile Include="myClasses\dgv\Cls_dgvCalendar.cs" />
+    <Compile Include="myClasses\dgv\Cls_dgvYearMonth.cs" />
+    <Compile Include="myClasses\shamsi\Cls_DateComponentsShamsi.cs" />
+    <Compile Include="myClasses\shamsi\Cls_ShamsiStatic.cs" />
+    <Compile Include="myComponents\BPersianCalendarTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ConvertDate.cs" />
-    <Compile Include="DateValidation.cs" />
-    <Compile Include="PCalendar.cs">
-      <SubType>Form</SubType>
+    <Compile Include="myComponents\BPersianCalendarTextBox.Designer.cs">
+      <DependentUpon>BPersianCalendarTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShamsiCalendar.cs" />
-    <Compile Include="SMIO_DataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <EmbeddedResource Include="Frm_BPersianCalendar.resx">
+      <DependentUpon>Frm_BPersianCalendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
