@@ -20,8 +20,6 @@
 که کلاس این شئ امکانات مختلفی ارائه می‌کند.
 
 
-
-
 ## درباره توسعه دهندگان
 
 ### Behnam Rajabi
@@ -44,7 +42,6 @@ The programmer of version 5.0.0.0 and later versions.
 به نقل از توسعه دهنده اولیه: فاتحه و صلوات
 
 این کنترل تقویم ساده، رایگان و آزاد و 
-
 [تحت لایسنس](./LICENSE) **[MIT](https://en.wikipedia.org/wiki/MIT_License)** می باشد.
 
 
@@ -82,7 +79,9 @@ The programmer of version 5.0.0.0 and later versions.
 <p align="center">
 	انتخاب ماه<br>
 	<img src="./Documents/images/img_png__12_run_Calendar_selectMonth.png" alt="BPersianCalendar Screenshot" width="40%">
-	
+</p>
+
+<p align="center">
 	انتخاب سال<br>
 	<img src="./Documents/images/img_png__13_run_Calendar_selectYear.png" alt="BPersianCalendar Screenshot" width="40%">
 </p>
@@ -90,7 +89,9 @@ The programmer of version 5.0.0.0 and later versions.
 <p align="center">
 	تاریخ در قالب کامل<br>
 	<img src="./Documents/images/img_png__20_run_textbox_farsi-full.png" alt="BPersianCalendar Screenshot" width="40%">
+</p>
 
+<p align="center">
 	تاریخ در قالب خلاصه<br>
 	<img src="./Documents/images/img_png__21_run_textbox_farsi-short.png" alt="BPersianCalendar Screenshot" width="40%">
 </p>
@@ -98,7 +99,9 @@ The programmer of version 5.0.0.0 and later versions.
 <p align="center">
 	تاریخ میلادی در قالب کامل<br>
 	<img src="./Documents/images/img_png__30_run_textbox_geregorean-full.png" alt="BPersianCalendar Screenshot" width="40%">
+</p>
 
+<p align="center">
 	تاریخ میلادی در قالب خلاصه<br>
 	<img src="./Documents/images/img_png__31_run_textbox_geregorean-short.png" alt="BPersianCalendar Screenshot" width="40%">
 </p>
