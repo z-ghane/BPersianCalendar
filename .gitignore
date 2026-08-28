@@ -1,2 +1,24 @@
-instructions.txt
+# Build output
+bin/
+obj/
+
+
+# NuGet packages
 *.nupkg
+*.snupkg
+
+
+# Visual Studio
+.vs/
+
+
+# Temporary/user-specific files
+*.user
+*.suo
+
+
+# Personal instructions
+instructions.txt
+
+
+
