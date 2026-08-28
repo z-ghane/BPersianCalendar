@@ -7,7 +7,7 @@
 برای ساخت یک فایل .dll
 به منظور استفاده از تقویم فارسی/جلالی/شمسی در فرم‌های ویندوزی ایجاد شده است.
 
-![NuGet](https://img.shields.io/nuget/v/BPersianCalendar)
+![NuGet](https://img.shields.io/NuGet/v/BPersianCalendar)
 ![License](https://img.shields.io/badge/Windows_Form_Control-%20c%23-darkgreen)
 ![NuGet Downloads](https://img.shields.io/nuget/dt/BPersianCalendar?color=blue)
 
@@ -47,9 +47,9 @@ The programmer of versions 5.0.0.0 and later.
 
 به نقل از توسعه دهنده اولیه: فاتحه و صلوات
 
-این تقویم ساده، رایگان و آزاد است.
+این کنترل تقویم ساده، رایگان و آزاد و 
 
-این کنترل رایگان و [تحت لایسنس](./LICENSE) **[MIT](https://en.wikipedia.org/wiki/MIT_License)** می باشد.
+[تحت لایسنس](./LICENSE) **[MIT](https://en.wikipedia.org/wiki/MIT_License)** می باشد.
 
 </div>
 
@@ -102,42 +102,42 @@ Note: Don't Run it Or you will get Error
 
 <p align="center">
 	ContextMenuStrip<br>
-	<img src="./Documents/images/img_png__10_run_textbox_ContextMenuStrip.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__10_run_textbox_ContextMenuStrip.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	تصویر ویژگی انتخاب سریع  <br>
-	<img src="./Documents/images/img_png__11_run_Calendar.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__11_run_Calendar.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	انتخاب ماه<br>
-	<img src="./Documents/images/img_png__12_run_Calendar_selectMonth.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__12_run_Calendar_selectMonth.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	انتخاب سال<br>
-	<img src="./Documents/images/img_png__13_run_Calendar_selectYear.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__13_run_Calendar_selectYear.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	تاریخ در قالب کامل<br>
-	<img src="./Documents/images/img_png__20_run_textbox_farsi-full.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__20_run_textbox_farsi-full.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	تاریخ در قالب خلاصه<br>
-	<img src="./Documents/images/img_png__21_run_textbox_farsi-short.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__21_run_textbox_farsi-short.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	تاریخ میلادی در قالب کامل<br>
-	<img src="./Documents/images/img_png__30_run_textbox_geregorean-full.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__30_run_textbox_geregorean-full.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 <p align="center">
 	تاریخ میلادی در قالب خلاصه<br>
-	<img src="./Documents/images/img_png__31_run_textbox_geregorean-short.png" alt="BPersianCalendar Screenshot" width="75%">
+	<img src="./Documents/images/img_png__31_run_textbox_geregorean-short.png" alt="BPersianCalendar Screenshot" width="50%">
 </p>
 
 
