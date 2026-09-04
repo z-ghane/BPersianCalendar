@@ -21,18 +21,22 @@
 - برگرداندن تاریخ انتخاب شده در قالب شئ‌ای به نام `DcShamsi` 
 که کلاس این شئ امکانات مختلفی ارائه می‌کند.
 
+<p align="center">
+  <img src="images/Demo_v.04.gif" alt="Demo">
+</p>
+
 
 ## مستندات
 
 برای آشنایی عمیق‌تر و نحوه‌ی استفاده از امکانات به فولدر 
-[a link](Documents/)
+[Documents](Documents/)
  سر بزنید.
 
 
 
 ## نحوه‌ی استفاده
 
-**1. Add the library to your project**
+**1. افزدن کتابخانه به پروژه خود**
 
 با روش‌های متفاوتی می‌توانید انجام دهید.
 
@@ -49,12 +53,12 @@
   (Or install it through the package manager console: 
   PM> `Install-Package BPersianClendar`)
 
-- Another way of doing this step would be: 
+- روش دیگر برای انجام این گام:
 
 cloning the project from GitHub, compiling the library yourself and adding it as a reference.
 
 
-**2. Add the BPersianClendar components to your ToolBox**
+**2. افزودن BPersianCalendar Components به ToolBox**
 
   If you have installed the NuGet package, 
   the BPersianClendar.dll file should be in the folder `//bin/Debug`. 
@@ -94,28 +98,12 @@ cloning the project from GitHub, compiling the library yourself and adding it as
 	<img src="./Documents/images/img_png__20_run_textbox_farsi-full.png" alt="BPersianCalendar Screenshot" width="40%">
 </p>
 
-<p align="center">
-	تاریخ در قالب خلاصه<br>
-	<img src="./Documents/images/img_png__21_run_textbox_farsi-short.png" alt="BPersianCalendar Screenshot" width="40%">
-</p>
-
-<p align="center">
-	تاریخ میلادی در قالب کامل<br>
-	<img src="./Documents/images/img_png__30_run_textbox_geregorean-full.png" alt="BPersianCalendar Screenshot" width="40%">
-</p>
-
-<p align="center">
-	تاریخ میلادی در قالب خلاصه<br>
-	<img src="./Documents/images/img_png__31_run_textbox_geregorean-short.png" alt="BPersianCalendar Screenshot" width="40%">
-</p>
 
 
-<p align="center">
-	DcShamsi object<br>
-	<img src="./Documents/images/img_png__50_DcShamsi.png" alt="BPersianCalendar Screenshot" width="75%">
-</p>
 
-</div>
+
+
+
 
 
 ## درباره توسعه دهندگان
@@ -139,9 +127,9 @@ The programmer of version 5.0.0.0 and later versions.
 
 به نقل از توسعه دهنده اولیه: فاتحه و صلوات
 
-این کنترل تقویم ساده، رایگان و آزاد و 
+این کنترل تقویم ساده، رایگان، آزاد و 
 [تحت لایسنس](./LICENSE) **[MIT](https://en.wikipedia.org/wiki/MIT_License)** می باشد.
 
-
+</div>
 
 
