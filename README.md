@@ -16,8 +16,6 @@
 
 - امکان شخصی سازی فونت تقویم.
 
-سازگاری افزونه با تغییر فونت در سیستم و پیشگیری از اختلال در اجرا با عوض شدن سیستم‌های مورد نظر
-
 - پیاده سازی شده با C# Windows Forms (.NET Framework 3.5)
 
 - برگرداندن تاریخ انتخاب شده در قالب شئ‌ای به نام `DcShamsi` 
@@ -26,8 +24,9 @@
 
 ## مستندات
 
-برای آشنایی عمیق‌تر و نحوه‌ی استفاده از امکانات
-به فولدر `Documents` سر بزنید.
+برای آشنایی عمیق‌تر و نحوه‌ی استفاده از امکانات به فولدر 
+[a link](Documents/)
+ سر بزنید.
 
 
 
@@ -37,21 +36,29 @@
 
 با روش‌های متفاوتی می‌توانید انجام دهید.
 
-ساده‌ترین روش افزودن بسته  نوگت [NuGet Package](https://www.nuget.org/packages/BPersianCalendar) به پروژه‌تان است
+- ساده‌ترین روش:
 
-  Right click on your project and click 'Manage NuGet Packages...'. Search for 'BPersianClendar' 
-  and click on install. 
+افزودن بسته  نوگت [NuGet Package](https://www.nuget.org/packages/BPersianCalendar) به پروژه‌تان است
+
+  Right click on your project and click 'Manage NuGet Packages...'. 
+  
+  Search for 'BPersianClendar' and click on install. 
+  
   Once installed the library will be included in your project references. 
+  
   (Or install it through the package manager console: 
   PM> `Install-Package BPersianClendar`)
 
-Another way of doing this step would be cloning the project from GitHub, 
-compiling the library yourself and adding it as a reference.
+- Another way of doing this step would be: 
+
+cloning the project from GitHub, compiling the library yourself and adding it as a reference.
 
 
 **2. Add the BPersianClendar components to your ToolBox**
 
-  If you have installed the NuGet package, the BPersianClendar.dll file should be in the folder //bin/Debug. 
+  If you have installed the NuGet package, 
+  the BPersianClendar.dll file should be in the folder `//bin/Debug`. 
+  
   Simply drag the BPersianClendar.dll file into your IDE's ToolBox and all the controls should be added there.
 
 
