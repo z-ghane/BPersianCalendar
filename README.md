@@ -22,7 +22,7 @@
 که کلاس این شئ امکانات مختلفی ارائه می‌کند.
 
 <p align="center">
-  <img src="images/Demo_v.04.gif" alt="Demo">
+  <img src="Documents/images/Demo_v.04.gif" alt="Demo">
 </p>
 
 
