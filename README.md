@@ -16,41 +16,12 @@
 
 - امکان شخصی سازی فونت تقویم.
 
+سازگاری افزونه با تغییر فونت در سیستم و پیشگیری از اختلال در اجرا با عوض شدن سیستم‌های مورد نظر
+
+- پیاده سازی شده با C# Windows Forms (.NET Framework 3.5)
+
 - برگرداندن تاریخ انتخاب شده در قالب شئ‌ای به نام `DcShamsi` 
 که کلاس این شئ امکانات مختلفی ارائه می‌کند.
-
-
-## درباره توسعه دهندگان
-
-### Behnam Rajabi
-
-The programmer of versions 1.0.0.0 to 4.0.0.0 .
-
-e-main : bhrajabi@gmail.com
-
-phone  : 09359656582
-
-### Z. Ghane
-
-The programmer of version 5.0.0.0 and later versions.
-
-اگر روزی توسعه دهنده خودش، تصمیم به اشتراک گذاری کدهای منبع خودش در گیت هاب گرفت، قطعا این مخزن پاک خواهد شد.
-
-
-## لایسنس
-
-به نقل از توسعه دهنده اولیه: فاتحه و صلوات
-
-این کنترل تقویم ساده، رایگان و آزاد و 
-[تحت لایسنس](./LICENSE) **[MIT](https://en.wikipedia.org/wiki/MIT_License)** می باشد.
-
-
-
-
-
-## Dependencies
-
-- .Net Framework 3.5
 
 
 ## مستندات
@@ -60,7 +31,32 @@ The programmer of version 5.0.0.0 and later versions.
 
 
 
+## نحوه‌ی استفاده
+
+**1. Add the library to your project**
+
+با روش‌های متفاوتی می‌توانید انجام دهید.
+
+ساده‌ترین روش افزودن بسته  نوگت [NuGet Package](https://www.nuget.org/packages/BPersianCalendar) به پروژه‌تان است
+
+  Right click on your project and click 'Manage NuGet Packages...'. Search for 'BPersianClendar' 
+  and click on install. 
+  Once installed the library will be included in your project references. 
+  (Or install it through the package manager console: 
+  PM> `Install-Package BPersianClendar`)
+
+Another way of doing this step would be cloning the project from GitHub, 
+compiling the library yourself and adding it as a reference.
+
+
+**2. Add the BPersianClendar components to your ToolBox**
+
+  If you have installed the NuGet package, the BPersianClendar.dll file should be in the folder //bin/Debug. 
+  Simply drag the BPersianClendar.dll file into your IDE's ToolBox and all the controls should be added there.
+
+
 ## تصاویر
+
 <p align="center">
 	PropertiesPanel <br>
 	<img src="./Documents/images/img_png__01_PropertiesPanel.png" alt="BPersianCalendar Screenshot" width="75%">
@@ -113,3 +109,32 @@ The programmer of version 5.0.0.0 and later versions.
 </p>
 
 </div>
+
+
+## درباره توسعه دهندگان
+
+### Behnam Rajabi
+
+The programmer of versions 1.0.0.0 to 4.0.0.0 .
+
+e-main : bhrajabi@gmail.com
+
+phone  : 09359656582
+
+### Z. Ghane
+
+The programmer of version 5.0.0.0 and later versions.
+
+اگر روزی توسعه دهنده خودش، تصمیم به اشتراک گذاری کدهای منبع خودش در گیت هاب گرفت، قطعا این مخزن پاک خواهد شد.
+
+
+## لایسنس
+
+به نقل از توسعه دهنده اولیه: فاتحه و صلوات
+
+این کنترل تقویم ساده، رایگان و آزاد و 
+[تحت لایسنس](./LICENSE) **[MIT](https://en.wikipedia.org/wiki/MIT_License)** می باشد.
+
+
+
+
